@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Beeralator_v2</string>
+    <string name="the_beeralator">The Beeralator</string>
+    <string name="calculate_your_evening_beer_requirements">Calculate your evening beer requirements.</string>
+    <string name="enter_your_answer">Enter your answer.</string>
+    <string name="submit">Submit</string>
+    <string name="restart">Restart?</string>
+    <string name="toggle_video">Toggle video?</string>
+</resources>
