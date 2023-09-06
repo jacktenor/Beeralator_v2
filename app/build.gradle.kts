@@ -3,13 +3,19 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file("C:\\Users\\john\\android.jks")
+        }
+    }
     namespace = "com.sativa.beeralator_v2"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.sativa.beeralator_v2"
-        minSdk = 24
-        targetSdk = 33
+        minSdk = 28
+        targetSdk = 34
 
         versionCode = 1
         versionName = "1.0"
