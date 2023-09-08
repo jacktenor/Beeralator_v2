@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         SwitchMaterial switchToggle = findViewById(R.id.switchToggle);
 
         inputEditText.requestFocus();
-
+        switchToggle.setChecked(true);
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 
             askNextQuestion();
