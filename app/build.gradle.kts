@@ -6,6 +6,9 @@ android {
     signingConfigs {
         getByName("debug") {
             storeFile = file("C:\\Users\\john\\android.jks")
+            storePassword = "Wordpass22!!"
+            keyAlias = "rep"
+            keyPassword = "Wordpass22!!"
         }
     }
     namespace = "com.sativa.beeralator_v2"
@@ -21,12 +24,17 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig = signingConfigs.getByName("debug")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("debug")
+        }
+        getByName("debug") {
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {

@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         SwitchMaterial switchToggle = findViewById(R.id.switchToggle);
 
         inputEditText.requestFocus();
-        switchToggle.setChecked(true);
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 
             askNextQuestion();
@@ -55,12 +54,15 @@ public class MainActivity extends AppCompatActivity {
 
             videoView = findViewById(R.id.videoView);
 
-            // Set video source from the raw directory
             videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.newtry);
+        videoView.start();
+
+        switchToggle.setChecked(true);
 
             switchToggle.setOnCheckedChangeListener((buttonView, isChecked) -> {
+
                 if (isChecked) {
-                    // Play video when switch is turned on
+
                     videoView.start();
                     videoView.setVisibility(View.VISIBLE);
 
